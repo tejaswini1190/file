@@ -1,0 +1,17 @@
+#!/bin/bash
+
+source="/c/Users/Administrator/Devops_1/shellscripts_practice/class9"
+DEST="/c/Users/Administrator/Devops_1/shellscripts_practice/backups"
+
+TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+
+BACKUP_DIR="$DEST/backup_$TIMESTAMP"
+
+mkdir -p "$BACKUP_DIR"
+
+cp -r "$source"/* "$BACKUP_DIR"
+
+echo "Backup completed from $source to $BACKUP_DIR"
+
+
+
